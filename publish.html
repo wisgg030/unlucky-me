@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布 - 动态</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/page-specific/publish.js"></script>
+
+</head>
+<body>
+    <div class="mini-program-container">
+
+
+        <!-- 发布内容区域 -->
+        <div class="publish-container">
+            <!-- 内容输入框卡片 -->
+            <div class="publish-card">
+                <!-- 重新设计的输入框布局，包含图片按钮、输入区域和发布按钮 -->
+                <div class="publish-input-container">
+                    <!-- 左侧图片按钮 -->
+                    <div class="publish-tool-item input-side-button" id="addImage">
+                        <img src="assets/icons/image.svg" alt="图片" style="width: 20px; height: 20px;">
+                    </div>
+                    <!-- 中间输入区域 -->
+                    <textarea class="publish-input" placeholder="没事哒没事哒没事哒QAQ" id="postContent"></textarea>
+                    <!-- 右侧发布按钮 -->
+                    <button class="publish-button-text" id="publishBtn">发布</button>
+                </div>
+                <!-- 隐藏的文件输入元素 -->
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            </div>
+
+            <!-- 图片预览容器 -->
+            <div class="publish-preview" id="imagePreview" style="display: none;"></div>
+
+            <!-- 发布设置 -->
+            <div class="publish-settings">
+                <div class="settings-title">展示时长</div>
+                <div class="visibility-options-simple">
+                    <div class="visibility-option-simple active" data-duration="forever">永久可见</div>
+                    <div class="visibility-option-simple" data-duration="3days">3天可见</div>
+                    <div class="visibility-option-simple" data-duration="1day">1天可见</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="bottom-nav">
+            <div class="bottom-nav-item" onclick="window.location.href='home.html'">
+                <span>首页</span>
+            </div>
+            <div class="bottom-nav-item active">
+                <span>发布</span>
+            </div>
+            <div class="bottom-nav-item" onclick="window.location.href='profile.html'">
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 所有JavaScript功能已移至publish.js文件 -->
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+      
+      <div class="mini-program-container">
+
+
+        <!-- 个人信息 -->
+        <div class="profile-simple-header">
+            <div id="leftPlaceholderDiv" class="left-placeholder-div">
+                <button id="backBtn" class="back-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">🍀</div>
+                <div class="profile-id">000001</div>
+            </div>
+            <div id="placeholderDiv" class="placeholder-div">
+                <button id="messagesBtn" class="messages-btn">我的消息</button>
+            </div>
+        </div>
+        
+        <!-- 消息卡片 -->
+        <div id="messagesCard" class="messages-card">
+            <div class="messages-card-header">
+                <h3>我的消息</h3>
+                <button id="closeMessagesBtn" class="close-btn">×</button>
+            </div>
+            <div class="messages-content">
+                <div class="messages-category">
+                    <div class="messages-list" id="interactionsList">
+                        <!-- 消息列表将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能模块 -->
+        <div class="profile-functions">
+            <div class="function-item active" data-tab="history">
+                <span class="function-text">发布历史</span>
+            </div>
+            <div class="function-item" data-tab="favorites">
+                <span class="function-text">我的收藏</span>
+            </div>
+        </div>
+
+        <!-- 内容展示区域 -->
+        <div class="content-display scrollable-container">
+            <!-- 发布历史 -->
+            <div id="historyContent" class="content-tab active">
+                <div class="profile-content-grid">
+                    <!-- 内容项 -->
+                    <div class="content-item" onclick="window.location.href='my-content.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed1.jpg" alt="发布内容">
+
+                    </div>
+                    <div class="content-item" onclick="window.location.href='my-content.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed2.jpg" alt="发布内容">
+                    </div>
+                    <div class="content-item" onclick="window.location.href='my-content.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed3.jpg" alt="发布内容">
+                    </div>
+                    <div class="content-item" onclick="window.location.href='my-content.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed4.jpg" alt="发布内容">
+                    </div>
+                    <div class="content-item" onclick="window.location.href='my-content.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed1.jpg" alt="发布内容">
+                    </div>
+                    <div class="content-item" onclick="window.location.href='my-content.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed2.jpg" alt="发布内容">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 我的收藏 -->
+            <div id="favoritesContent" class="content-tab" style="display: none;">
+                <div class="profile-content-grid">
+                    <div class="content-item" onclick="window.location.href='favorites.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed3.jpg" alt="收藏内容">
+                    </div>
+                    <div class="content-item" onclick="window.location.href='favorites.html'" style="cursor: pointer;">
+                        <img src="assets/images/feed4.jpg" alt="收藏内容">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- 底部导航 -->
+        <div class="bottom-nav">
+            <div class="bottom-nav-item" onclick="window.location.href='home.html'">
+                <span>首页</span>
+            </div>
+            <div class="bottom-nav-item" onclick="window.location.href='publish.html'">
+                <span>发布</span>
+            </div>
+            <div class="bottom-nav-item active">
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/page-specific/profile.js"></script>
+    
+
+</body>
+</html>
